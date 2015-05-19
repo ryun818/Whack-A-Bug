@@ -1,0 +1,52 @@
+<RelativeLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/banner"
+        android:src="@drawable/header_banner"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner"
+        android:background="#a00"
+        />
+
+    <LinearLayout
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#000"
+        android:layout_below="@id/webView"
+        android:layout_alignParentBottom="true">
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/splash"
+        android:src="@drawable/splash"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+    />
+</RelativeLayout>
