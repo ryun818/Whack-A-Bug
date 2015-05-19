@@ -27,7 +27,6 @@ public class Interstitial
         NendAdInterstitial.setListener(this);
         
 
-        // 表示結果が返却される
         //NendAdInterstitialShowResult result = NendAdInterstitial.showAd(act);
 //
 //        // 表示結果に応じて処理を行う
@@ -83,6 +82,7 @@ public class Interstitial
         switch (statusCode) {
         case SUCCESS:
             NendAdInterstitialShowResult result = NendAdInterstitial.showAd(act, this);
+            Log.d(TAG, result.toString());
             break;
         case FAILED_AD_DOWNLOAD:
             break;
