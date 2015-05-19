@@ -1,13 +1,8 @@
 package jp.ryun.android.whack_a_bug;
 
 import android.app.Activity;
-import android.content.Context;
-import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 
 import net.nend.android.NendAdInterstitial;
 import net.nend.android.NendAdInterstitial.NendAdInterstitialClickType;
@@ -19,7 +14,7 @@ public class Interstitial
         implements NendAdInterstitial.OnClickListener, OnCompletionListener {
     
     private String TAG = Interstitial.this.getClass().getSimpleName();
-    private Handler mHandler = new Handler();
+//    private Handler mHandler = new Handler();
     private Activity act;
     
     public Interstitial(Activity act) {
