@@ -1,7 +1,6 @@
 package jp.ryun.android.whack_a_bug;
 
 import android.app.Activity;
-import android.os.Handler;
 import android.util.Log;
 
 import net.nend.android.NendAdInterstitial;
@@ -25,7 +24,6 @@ public class Interstitial
 
         NendAdInterstitial.loadAd(act.getApplicationContext(), "0192693f7fdde59a8959149725b9c984cc601567", 365095);
         //NendAdInterstitial.loadAd(act.getApplicationContext(), "8c278673ac6f676dae60a1f56d16dad122e23516", 213206); // test
-        // 必要に応じて広告取得結果通知を受けとる
         NendAdInterstitial.setListener(this);
         
 
@@ -61,14 +59,11 @@ public class Interstitial
 //    }, 30000);
     }
     
-    /**
-     * インタースティシャル広告クリック通知
-     */
+
     @Override
     public void onClick(NendAdInterstitialClickType clickType) {
         Log.d(TAG, clickType.name());
 
-        // クリックに応じて処理行う
         switch (clickType) {
         case CLOSE:
             //NendAdInterstitial.dismissAd();
@@ -81,14 +76,10 @@ public class Interstitial
         }
     }
     
-    /**
-     * 広告受信通知
-     */
     @Override
     public void onCompletion(NendAdInterstitialStatusCode statusCode) {
         Log.d(TAG, statusCode.name());
 
-        // 受信結果に応じて処理を行う
         switch (statusCode) {
         case SUCCESS:
             NendAdInterstitialShowResult result = NendAdInterstitial.showAd(act, this);
